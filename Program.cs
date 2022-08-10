@@ -2,15 +2,83 @@
 using System.IO;
 using System.Diagnostics;
 using System;
+List<string> Nomes = new list<string>();
+Nomes.Add("José");
+Nomes.Add("Thiago");
+Nomes.Add("Gabriela");
+Nomes.Add("Hugo");
+Nomes.Add("Carolina");
+Nomes.Add("Letícia");
+Nomes.Add("Rosana");
+Nomes.Add("Adriana");
+Nomes.Add("André");
+Nomes.Add("Fernanda");
+List<string> Sobrenomes = new list<string>();
+Sobrenomes.Add("Pinto");
+Sobrenomes.Add("Ribeiro");
+Sobrenomes.Add("Fernandes");
+Sobrenomes.Add("Silva");
+Sobrenomes.Add("Oliveira");
+Sobrenomes.Add("Nunes");
+Sobrenomes.Add("Dhar");
+Sobrenomes.Add("Bittencourt");
+Sobrenomes.Add("Alves");
+Sobrenomes.Add("Neves");
+List<string> Adjetivos = new list<string>();
+Adjetivos.Add("Amazing");
+Adjetivos.Add("Great");
+Adjetivos.Add("Awesome");
+Adjetivos.Add("Unstoppable");
+Adjetivos.Add("Legendary");
+Adjetivos.Add("Unbelivable");
+Adjetivos.Add("Good");
+Adjetivos.Add("Godlike");
+Adjetivos.Add("Perfect");
+Adjetivos.Add("Beautiful");
+List<string> Caracteres = new list<string>();
+Caracteres.Add("!");
+Caracteres.Add("@");
+Caracteres.Add("#");
+Caracteres.Add("$");
+Caracteres.Add("%");
+Caracteres.Add("¨");
+Caracteres.Add("&");
+Caracteres.Add("*");
+Caracteres.Add("(");
+Caracteres.Add(")");
+List<string> Senhas = new list<string>();
+Senhas.Add("Qwer");
+Senhas.Add("tyu");
+Senhas.Add("iop");
+Senhas.Add("asd");
+Senhas.Add("fgh");
+Senhas.Add("jkl");
+Senhas.Add("zxc");
+Senhas.Add("vbn");
+Senhas.Add("mko");
+Senhas.Add("qed");
+Random rnd = new Random();
+int Nrnd = rnd.Next(Nome.Count);
+int SNrnd = rnd.Next(Sobrenomes.Count);
+int Arnd = rnd.Next(Adjetivos.Count);
+int Crnd = rnd.Next(Caracteres.Count);
+int Srnd = rnd.Next(Senhas.Count);
+Console.WriteLine(Nomes[Nrnd]);
+Console.WriteLine(Sobrenomes[SNrnd]);
+Console.WriteLine(Adjetivos[Arnd]);
+Console.WriteLine(Caracteres[Crnd]);
+Console.WriteLine(Senhas[Srnd]);
 
 
-Console.WriteLine("oi");
 
 /*
 
+Console.WriteLine("oi");
+
+
 using ProjetoSENAI.Model;
 
-/* Usuario usuario = new Usuario();
+ Usuario usuario = new Usuario();
 usuario.Nome = "Rogerinho Fumaça";
 usuario.Senha = "senhaforti";
 
@@ -104,7 +172,7 @@ string ReverterString(string s)
     return string.Concat(s.Reverse());
 }
 
-/*
+
 void MinhaFuncao(string s)
 {
     Console.WriteLine("Olá mundo");

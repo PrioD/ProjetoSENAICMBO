@@ -24,7 +24,7 @@ namespace ProjetoSENAI.Model
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=SNCCHLAB02F05\\TEW_SQLEXPRESS;Initial Catalog=ExemploSenai;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=SNCCH01LABF114\\TEW_SQLEXPRESS;Initial Catalog=ExemploSenai;Integrated Security=True");
             }
         }
 
@@ -36,14 +36,10 @@ namespace ProjetoSENAI.Model
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.Conteudo).IsUnicode(false);
-
-                entity.Property(e => e.Momento).HasColumnType("datetime");
-
-                entity.HasOne(d => d.PublicadorNavigation)
+                entity.HasOne(d => d.PublicanteNavigation)
                     .WithMany(p => p.Posts)
-                    .HasForeignKey(d => d.Publicador)
-                    .HasConstraintName("FK__Post__Publicador__1273C1CD");
+                    .HasForeignKey(d => d.Publicante)
+                    .HasConstraintName("FK__Post__Publicante__1273C1CD");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
